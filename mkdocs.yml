@@ -61,14 +61,15 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/squidfunk
+      link: https://github.com/easy-quest/easy-quest/
     - icon: fontawesome/brands/gitter
-      link: https://gitter.im/squidfunk/mkdocs-material
+      link: https://easy-quest.github.io/web/
     - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+      link: https://easy-quest.github.io/web/
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/squidfunk
+      link: https://easy-quest.github.io/web/
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/squidfunk/
+      link: https://easy-quest.github.io/web/
     - icon: fontawesome/brands/instagram
-      link: https://instagram.com/squidfunk
+      link: https://easy-quest.github.io/web/mkdocs build
+      

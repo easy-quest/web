@@ -1,6 +1,6 @@
-## ПРОВЕРКА УСЛОВИЙ В BASH
+## 0.1. ПРОВЕРКА УСЛОВИЙ В BASH
 
->   Bash/Python/PHP
+> Bash/Python/PHP
 
 При написании скриптов практически всегда имеется необходимость в
 проверке (ветвлении) каких либо процессов, другими словами — «делать это
@@ -11,7 +11,7 @@
 претендую на истину, потому что bash только изучаю, не один из примеров
 не несет сакраментального характера, все они сделаны для наглядности.
 
-### Операторы ifthen и else
+### 0.1.1. Операторы ifthen и else
 
 Операторы ifthen проверяют код завершения
 списка команд на «успешное завершение (истина)» что в свою очередь
@@ -23,7 +23,7 @@
 Все выше написанное возможно будет понятно не сразу, но когда дальше по
 статье пойдут примеры, все станет на свои места.
 
-### Скобки
+### 0.1.2. Скобки
 
 [ — является специальной встроенной командой test воспринимающей свои
 аргументы как выражение сравнения или файловую проверку […..].
@@ -66,17 +66,16 @@ ifthenelse:
 
 -O,() — логическое «ИЛИ»
 
-### КОНСТРУКЦИИ ПРОСТОЙ ПРОВЕРКИ `IFTHEN`
+### 0.1.3. КОНСТРУКЦИИ ПРОСТОЙ ПРОВЕРКИ `IFTHEN`
 
 `if [[ condition ]]; then commands fi`
 
-
 ```bash
 if [[ condition ]]; then        
- commands                                  
+ commands
 fi
-```                         
-                                  
+```
+
 **ДРУГИМИ СЛОВАМИ:**
 
 если проверяемое_выражение_или_команды_верны; то выполняем команды
@@ -91,7 +90,7 @@ fi
 #!/bin/bash                       
 
 if echo Тест; then                
-echo 0                                   
+echo 0 
 fi
 ```                            
     
@@ -102,17 +101,16 @@ fi
 
 **ПРИМЕР**
 
-#!/bin/bash if [ -f $HOME/.bashrc ]; then echo "Файл существует!" fi
+# 1. !/bin/bash if [ -f $HOME/.bashrc ]; then echo "Файл существует!" fi
 
 
-                                  #!/bin/bash                       
-                                  
-                                   if [ -f $HOME/.bashrc ]; then     
-                                  
-                                   echo "Файл существует!"           
-                                  
- 4                                  fi                                
+# 2. !/bin/bash                       
 
+ if [ -f $HOME/.bashrc ]; then     
+
+ echo "Файл существует!"           
+
+fi                                
 
 где:
 
@@ -121,18 +119,18 @@ ECHO — печатает сообщение в консоль
 
 **ПРИМЕР **
 
-#!/bin/bash if [[ -f $HOME/.bashrc && -f /usr/bin/nano ]]; then echo
+# 3. !/bin/bash if [[ -f $HOME/.bashrc && -f /usr/bin/nano ]]; then echo
 "Все впорядке, можно редактировать!" fi
 
 
-                                  #!/bin/bash                       
-                                  
-                                   if [[ -f $HOME/.bashrc && -f      
+# 4. !/bin/bash                       
+
+ if [[ -f $HOME/.bashrc && -f      
 /usr/bin/nano ]]; then            
                                  
 echo "Все впорядке, можно         
- 4                                  редактировать!"                   
-                                  
+ 4редактировать!"                   
+
 fi                                
 
 
@@ -142,20 +140,20 @@ fi
 тоже «истина», то выполняем команды (echo)
 -F  —  ключ проверки на существования файла (о них чуть ниже)
 
-### Конструкции простой проверки ifthenelse
+### 4.0.4. Конструкции простой проверки ifthenelse
 
 if [[ condition ]]; then commands 1 else commands  fi
 
 
-                                  if [[ condition ]]; then          
-                                  
-                                       commands 1                    
-                                  
-                                   else                              
-                                  
- 4                                      commands                     
-                                  
- 5                                  fi                                
+if [[ condition ]]; then          
+
+     commands 1                    
+
+ else                              
+
+ 4    commands                     
+
+ 5fi                                
 
 
 другими словами:
@@ -169,85 +167,85 @@ if [[ condition ]]; then commands 1 else commands  fi
 результате печатается в консоль «Тест» и «0» потому что команда «echo
 Тест» успешна и это «истина».
 
-#!/bin/bash if echo Тест; then echo 0 else echo 1 fi
+# 5. !/bin/bash if echo Тест; then echo 0 else echo 1 fi
 
 
-                                  #!/bin/bash                       
-                                  
-                                   if echo Тест;                     
-                                  
-                                       then echo 0                   
-                                  
- 4                                  else                              
-                                  
- 5                                      echo 1                        
-                                  
- 6                                  fi                                
+# 6. !/bin/bash                       
+
+ if echo Тест;                     
+
+     then echo 0                   
+
+ 4else                              
+
+ 5    echo 1                        
+
+ 6fi                                
 
 
 Намерено допустите ошибку изменив echo, в результате получите «1» и
 сообщение о том что «команда echo не существует» и это «ложь».
 
-#!/bin/bash if echo Тест; then echo 0 else echo 1 fi
+# 7. !/bin/bash if echo Тест; then echo 0 else echo 1 fi
 
 
-                                  #!/bin/bash                       
-                                  
-                                   if echo Тест; then                
-                                  
-                                       echo 0                        
-                                  
- 4                                  else                              
-                                  
- 5                                      echo 1                        
-                                  
- 6                                  fi                                
+# 8. !/bin/bash                       
+
+ if echo Тест; then                
+
+     echo 0                        
+
+ 4else                              
+
+ 5    echo 1                        
+
+ 6fi                                
 
 
-### Примеры «существуют ли файл?»
+### 8.0.5. Примеры «существуют ли файл?»
 
 **ПРИМЕР 5**
 
 Если файл bashrc существует, то печатает в консоль «Файл существует!»,
 иначе печатает «Файл не существует!»
 
-#!/bin/bash if [ -f "$HOME/.bashrc" ]; then echo "Файл существует!" else
+# 9. !/bin/bash if [ -f "$HOME/.bashrc" ]; then echo "Файл существует!" else
 echo "Файл не существует!" fi
 
 
-                                  #!/bin/bash                       
-                                  
-                                   if [ -f "$HOME/.bashrc" ]; then   
-                                  
-                                       echo "Файл существует!"       
-                                  
- 4                                  else                              
-                                  
- 5                                      echo "Файл не существует!"    
-                                  
- 6                                  fi                                
+# 10. !/bin/bash                       
+
+ if [ -f "$HOME/.bashrc" ]; then   
+
+     echo "Файл существует!"       
+
+ 4else                              
+
+ 5    echo "Файл не существует!"    
+
+ 6fi                                
 
 
 Поиграйте с именем проверяемого файла
 
 **ПРИМЕР 5**
 
-#!/bin/bash if [[ -f "$HOME/.bashrc" && -f "/usr/bin/nano" ]]; then echo
+# 11. !/bin/bash if [[ -f "$HOME/.bashrc" && -f "/usr/bin/nano" ]]; then echo
 "Все в порядке, можно редактировать!" else echo "Ошибка!" fi
 
 
-                                  #!/bin/bash                       
-                                  
-                                   if [[ -f "$HOME/.bashrc" && -f    
+# 12. !/bin/bash                       
+
+ if [[ -f "$HOME/.bashrc" && -f    
 "/usr/bin/nano" ]]; then          
                                  
 echo "Все в порядке, можно    
- 4                                  редактировать!"                   
-                                  
- 5                                  else                              
-                                  
- 6                                      echo "Ошибка!"                
-                                  
+ 4редактировать!"                   
+
+ 5else                              
+
+ 6    echo "Ошибка!"                
+
 fi                                
 
 
@@ -265,7 +263,7 @@ fi
 расставление кавычек уходит далеко от темы, поэтому могу посоветовать
 обратится к руководству Advanced Bash Scripting
 
-### Арифметика
+### 12.0.6. Арифметика
 
  
 
@@ -278,16 +276,16 @@ fi
 Используем круглые скобки для математического сравнение. Если «» меньше
 «6» печатаем «Да».
 
-#!/bin/bash if ((  < 6));then echo Да fi
+# 13. !/bin/bash if ((  < 6));then echo Да fi
 
 
-                                  #!/bin/bash                       
-                                  
-                                   if ((  < 6));then                
-                                  
-                                       echo Да                       
-                                  
- 4                                  fi                                
+# 14. !/bin/bash                       
+
+ if ((  < 6));then                
+
+     echo Да                       
+
+ 4fi                                
 
 
  
@@ -297,30 +295,30 @@ fi
 Использование команды test, коей являются квадратные скобки. Если «»
 меньше «6» печатаем «Да».
 
-#!/bin/bash if [  -lt 6 ]; then echo Да fi
+# 15. !/bin/bash if [  -lt 6 ]; then echo Да fi
 
 
-                                  #!/bin/bash if [  -lt 6 ]; then  
-                                  
-                                       echo Да                       
-                                  
-                                   fi                                
+# 16. !/bin/bash if [  -lt 6 ]; then  
+
+     echo Да                       
+
+ fi                                
 
 
 Можно использовать и двойные квадратные скобки, это расширенный вариант
 команды test, эквивалентом которой является «[ ]». Если «» меньше «6»
 печатаем «Да».
 
-#!/bin/bash if [[  -lt 6 ]]; then echo Да fi
+# 17. !/bin/bash if [[  -lt 6 ]]; then echo Да fi
 
 
-                                  #!/bin/bash                       
-                                  
-                                   if [[  -lt 6 ]]; then            
-                                  
-                                       echo Да                       
-                                  
- 4                                  fi                                
+# 18. !/bin/bash                       
+
+ if [[  -lt 6 ]]; then            
+
+     echo Да                       
+
+ 4fi                                
 
 
 **ПРИМЕР 8**
@@ -329,17 +327,17 @@ fi
 «&&». Если первое выражение  =  (истина) тогда выполняем второе, и
 если оно тоже = (истина), печатаем «Верно»
 
-#!/bin/bash a="" b="" if [[  = "$a" &&  = "$b" ]] ; then echo Верно
+# 19. !/bin/bash a="" b="" if [[  = "$a" &&  = "$b" ]] ; then echo Верно
 else echo Не верно fi
 
 
-                                  #!/bin/bash                       
-                                  
-                                   a=""                             
-                                  
-                                   b=""                             
-                                  
- 4                                  if [[  = "$a" &&  = "$b" ]] ;   
+# 20. !/bin/bash                       
+
+ a=""                             
+
+ b=""                             
+
+ 4if [[  = "$a" &&  = "$b" ]] ;   
 then                              
  5                                
 echo Верно                    
@@ -354,17 +352,17 @@ fi
 Если первое выражение  =  (истина) тогда выполняем второе, и если
 переменная «b» не равна двум (ложь), печатаем «Не верно»
 
-#!/bin/bash a="" b="" if [[  = "$a" &&  = "$b" ]] ; then echo Верно
+# 21. !/bin/bash a="" b="" if [[  = "$a" &&  = "$b" ]] ; then echo Верно
 else echo Не верно fi
 
 Bash
-                                  #!/bin/bash                       
-                                  
-                                   a=""                             
-                                  
-                                   b=""                             
-                                  
-                                  
+# 22. !/bin/bash                       
+
+ a=""                             
+
+ b=""                             
+
+
 if [[  = "$a" &&  = "$b" ]] ; then                              
 echo Верно                    
                               
@@ -374,57 +372,53 @@ echo Не верно
            делать проще, нам главное понять принцип `ifthen` и `else`,
 не стесняйтесь менять, подставляя свои значения.
 
-### Вложение нескольких проверок вкладывать в блок несколько блоков
+### Вложение нескольких проверок
 
-```Bash
-#!/bin/bash if [[ condition 1 ]]; then if [[ condition  ]]; then
-command 1 else command  fi else command  fi
-```
-
+Bash позволяет вкладывать в блок несколько блоков
 
 ```bash
-#!/bin/bash                       
-                                  
-if [[ condition 1 ]]; then        
-                                  
-if [[ condition  ]]; then    
-                                  
-command 1                 
-                                  
-else                          
-                                  
-command                  
-else                              
-                                  
-command  3                    
-                                  
-fi
-```                                
+#!/bin/bash
 
+if [ Условие 1 ]; then
+  if [ Условие 2 ]; then
+    Команда 1
+  else
+    Команда 2
+  fi
+else
+  Команда 3
+fi         
+
+```
 
 ### Построения многоярусных конструкций
 
-Для построения многоярусных конструкции, когда необходимо выполнять
-множество проверок лучше использовать `elif` — это
+Для построения многоярусных конструкции, когда необходимо выполнять множество проверок лучше использовать `elif` — это краткая форма записи конструкции `else if`.
 
 
-
-command 2                     
-                                  
-elif [[ condition  ]]; then      
-                                  
-command 3                     
-                                  
-command 4                     
-                                  
-else                              
-                                  
-command 5                     
-                                  
-fi
-```                                
-
-
+```bash
+if [ Условие 1 ]; then
+   Команда 1
+   Команда 2
+elif [ Условие 2 ]; then
+   Команда 3
+   Команда 4
+else
+   Команда 5
+fi                           
+```
  
+**Весьма полезно, спасибо!**
 
+Хотелось бы побольше примеров, например я долго искал как можно использовать в условиях результаты выполнения команд:
+```bash
+#!/bin/bash
+var=`ps afx | grep -U worker.php ` # Все процессы с именем worker
+output=$(grep -e 'first' <<<"$var" | wc -l) # Отсеиваем нужный процесс
+if test "$output" -ge "1" ; then # Если больше или равен 1 
+    echo "OK - $output" 
+else
+    /usr/bin/php /var/www/worker.php first & # Иначе запускаем
+fi
+```
 Взято с http://itbuben.org/blog/Unix-way/807.html

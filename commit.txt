@@ -13,18 +13,18 @@ SYNOPSIS
                   [-S[<keyid>]] [--] [<pathspec>...]
 
 DESCRIPTION
-       Create a new commit containing the current contents of the index and the given log message describing the changes. The new commit is a direct child of
-       HEAD, usually the tip of the current branch, and the branch is updated to point to it (unless no branch is associated with the working tree, in which
-       case HEAD is "detached" as described in git-checkout(1)).
+       Создайте новый коммит, содержащий текущее содержимое индекса и данного журнала, описывающего изменения.Новый фиксатор является прямым ребенком
+       Голова, как правило, наконечник текущей ветки, и ветвь обновляется, чтобы указать на него (если нет ветви не связано с рабочим деревом, в котором
+       Главная головка «отделена», как описано в Git-Checkout (1)).
 
-       The content to be committed can be specified in several ways:
+       Содержание, которое будет совершено, может быть указано несколькими способами:
 
-        1. by using git-add(1) to incrementally "add" changes to the index before using the commit command (Note: even modified files must be "added");
+        1.Используя GIT-Add (1), чтобы постепенно «добавить» изменения в индекс перед использованием команды Commit (Примечание: даже модифицированные файлы должны быть «добавленными»);
 
-        2. by using git-rm(1) to remove files from the working tree and the index, again before using the commit command;
+        2.Используя GIT-RM (1), чтобы удалить файлы с рабочего дерева и индекса, еще раз перед использованием команды Commit;
 
-        3. by listing files as arguments to the commit command (without --interactive or --patch switch), in which case the commit will ignore changes staged
-           in the index, and instead record the current content of the listed files (which must already be known to Git);
+        3. Перечисление файлов в качестве аргументов в команду коммита (без переключателя INTERActive или --Patch), в этом случае Commit будет игнорировать изменения.
+           в индексе и вместо этого записывают текущее содержание перечисленных файлов (которые должны быть уже известны git);
 
         4. by using the -a switch with the commit command to automatically "add" changes from all known files (i.e. all files that are already listed in the
            index) and to automatically "rm" files in the index that have been removed from the working tree, and then perform the actual commit;
@@ -406,3 +406,10 @@ GIT
        Part of the git(1) suite
 
 Git 2.25.1                                                                03/04/2021                                                            GIT-COMMIT(1)
+
+status        - Показать пути с изменениями
+update        - Добавьте состояние рабочего дерева в устроен набор изменений
+revert        - Вернитесь набор изменений обратно в версию головы
+patch         - Выберите пробежки и обновить выборочно
+diff          - Посмотреть различие между головой и индексом
+add untracked - Добавить содержимое неповрежденных файлов в устроен набор изменений
