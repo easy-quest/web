@@ -71,7 +71,7 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://easy-quest.github.io/web/
     - icon: fontawesome/brands/instagram
-      link: https://easy-quest.github.io/web/mkdocs build
+      link: https://easy-quest.github.io/web/
       
 # Extensions
 markdown_extensions:

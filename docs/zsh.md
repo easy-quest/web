@@ -4,15 +4,15 @@ category: CLI
 layout: 2017/sheet
 ---
 
-### Expressions
+### Выражения
 
-| Expression        | Example             | Description
+| Выражение         | Пример              | Описание
 | ---               | ---                 | ---
-| `!!`              | `sudo !!`           | Last command (`sudo !!`)
+| `!!`              | `sudo !!`           | Последняя команда (`sudo !!`)
 | ---               | ---                 | ---
-| `!*`              | `vim !*`            | Last command's parameters (`vim !*`)
-| `!^`              |                     | Last command's first parameter
-| `!$`              |                     | Last command's last parameter
+| `!*`              | `vim !*`            | Параметры последней команды (`vim !*`)
+| `!^`              |                     | Первый параметр последней команды
+| `!$`              |                     | Последний параметр последней команды
 | ---               | ---                 | ---
 | `!?ls` `<tab>`    | `sudo !?mv` `<tab>` | Command and params of last `ls` command
 | `!?ls?:*` `<tab>` |                     | Params of last `ls` command
@@ -21,21 +21,21 @@ layout: 2017/sheet
 | `*(m-4)`          |                     | Last modified <4 days ago
 {: .-headers}
 
-### Change default shell
+### Изменить оболочку по умолчанию
 
 ```bash
 chsh -s `which zsh`
 ```
 
-### Process Substitution
+### Замена процесса
 
-| Expression        | Example                                               | Description
+| Выражение         | Пример                                                | Описание
 | ---               | ---                                                   | ---
-| `<(COMMAND)`      | `grep "needle" <(curl "https://haystack.io")`         | Replace argument with _named pipe/FIFO_ (read-only) with command output
-| `=(COMMAND)`      | `vim =(curl "https://haystack.io")`                   | Replace argument with _file_ (writable) containing command output
+| `<(COMMAND)`      | `grep "needle" <(curl "https://haystack.io")`         | Заменить аргумент с _named pipe/FIFO_ (только для чтения) с выводом команды
+| `=(COMMAND)`      | `vim =(curl "https://haystack.io")`                   | Заменить аргумент с _file_ (запись), содержащая вывод команды
 {: .-headers}
 
-### Also see
+### Также см
 
 - [Bash cheatsheet](./bash)
 
