@@ -1,18 +1,24 @@
+
+# Project information
 site_name: My Docs
+site_url: https://easy-quest.github.io/web/
+
+
+
 # Configuration
 theme:
   name: material
-  # custom_dir: material
+  custom_dir: overrides
 
   # Static files
   static_templates:
     - 404.html
 
-  # Don't include MkDocs' JavaScript
-  include_search_page: false
-  search_index_only: true
+  # Не включайте JavaScript MKDOCS
+  # include_search_page: false
+  # search_index_only: true
 
-  # Default values, taken from mkdocs_theme.yml
+  # Значения по умолчанию, взятые из mkdocs_theme.yml
   language: ru
   features:
     # - navigation.instant
@@ -20,7 +26,7 @@ theme:
     - navigation.tabs
   palette:
     - scheme: default
-      primary: indigo
+      primary: purple
       accent: indigo
       toggle:
         icon: material/weather-night

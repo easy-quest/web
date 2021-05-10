@@ -7,6 +7,10 @@ authors = ["easy-quest <easy.quest@yandex.ru>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 mkdocs-material = "^7.1.4"
+Pygments = "^2.9.0"
+Markdown = "^3.3.4"
+pymdown-extensions = "^8.2"
+mkdocs-material-extensions = "^1.0.1"
 
 [tool.poetry.dev-dependencies]
 
