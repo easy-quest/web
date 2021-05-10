@@ -72,11 +72,11 @@ ifthenelse:
 
 
 ```bash
-if [[ condition ]]; then                                            
- commands                                                                      
+if [[ condition ]]; then        
+ commands                                  
 fi
-```                                                             
-                                                                      
+```                         
+                                  
 **ДРУГИМИ СЛОВАМИ:**
 
 если проверяемое_выражение_или_команды_верны; то выполняем команды
@@ -89,15 +89,15 @@ fi
 ```
 ```bash
 #!/bin/bash                       
-                                                                        
+
 if echo Тест; then                
-echo 0                                                                       
+echo 0                                   
 fi
-```                                                                                                    
-                                                                            
-                                                 
-                                                        
-                                                        Часто встречается в скриптах проверка — «существует ли файлы или
+```                            
+    
+             
+                    
+                    Часто встречается в скриптах проверка — «существует ли файлы или
 каталоги» на их примере покажу работу
 
 **ПРИМЕР**
@@ -106,11 +106,11 @@ fi
 
 
                                   #!/bin/bash                       
-                                                                      
+                                  
                                    if [ -f $HOME/.bashrc ]; then     
-                                                                      
+                                  
                                    echo "Файл существует!"           
-                                                                      
+                                  
  4                                  fi                                
 
 
@@ -126,14 +126,14 @@ ECHO — печатает сообщение в консоль
 
 
                                   #!/bin/bash                       
-                                                                      
+                                  
                                    if [[ -f $HOME/.bashrc && -f      
-                                    /usr/bin/nano ]]; then            
-                                                                     
-                                    echo "Все впорядке, можно         
+/usr/bin/nano ]]; then            
+                                 
+echo "Все впорядке, можно         
  4                                  редактировать!"                   
-                                                                      
-                                    fi                                
+                                  
+fi                                
 
 
 где:
@@ -148,13 +148,13 @@ if [[ condition ]]; then commands 1 else commands  fi
 
 
                                   if [[ condition ]]; then          
-                                                                      
+                                  
                                        commands 1                    
-                                                                      
+                                  
                                    else                              
-                                                                      
+                                  
  4                                      commands                     
-                                                                      
+                                  
  5                                  fi                                
 
 
@@ -173,15 +173,15 @@ if [[ condition ]]; then commands 1 else commands  fi
 
 
                                   #!/bin/bash                       
-                                                                      
+                                  
                                    if echo Тест;                     
-                                                                      
+                                  
                                        then echo 0                   
-                                                                      
+                                  
  4                                  else                              
-                                                                      
+                                  
  5                                      echo 1                        
-                                                                      
+                                  
  6                                  fi                                
 
 
@@ -192,15 +192,15 @@ if [[ condition ]]; then commands 1 else commands  fi
 
 
                                   #!/bin/bash                       
-                                                                      
+                                  
                                    if echo Тест; then                
-                                                                      
+                                  
                                        echo 0                        
-                                                                      
+                                  
  4                                  else                              
-                                                                      
+                                  
  5                                      echo 1                        
-                                                                      
+                                  
  6                                  fi                                
 
 
@@ -216,15 +216,15 @@ echo "Файл не существует!" fi
 
 
                                   #!/bin/bash                       
-                                                                      
+                                  
                                    if [ -f "$HOME/.bashrc" ]; then   
-                                                                      
+                                  
                                        echo "Файл существует!"       
-                                                                      
+                                  
  4                                  else                              
-                                                                      
+                                  
  5                                      echo "Файл не существует!"    
-                                                                      
+                                  
  6                                  fi                                
 
 
@@ -237,18 +237,18 @@ echo "Файл не существует!" fi
 
 
                                   #!/bin/bash                       
-                                                                      
+                                  
                                    if [[ -f "$HOME/.bashrc" && -f    
-                                    "/usr/bin/nano" ]]; then          
-                                                                     
-                                        echo "Все в порядке, можно    
+"/usr/bin/nano" ]]; then          
+                                 
+echo "Все в порядке, можно    
  4                                  редактировать!"                   
-                                                                      
+                                  
  5                                  else                              
-                                                                      
+                                  
  6                                      echo "Ошибка!"                
-                                                                      
-                                    fi                                
+                                  
+fi                                
 
 
 Ключи к файлам и каталогам
@@ -282,11 +282,11 @@ echo "Файл не существует!" fi
 
 
                                   #!/bin/bash                       
-                                                                      
+                                  
                                    if ((  < 6));then                
-                                                                      
+                                  
                                        echo Да                       
-                                                                      
+                                  
  4                                  fi                                
 
 
@@ -301,9 +301,9 @@ echo "Файл не существует!" fi
 
 
                                   #!/bin/bash if [  -lt 6 ]; then  
-                                                                      
+                                  
                                        echo Да                       
-                                                                      
+                                  
                                    fi                                
 
 
@@ -315,11 +315,11 @@ echo "Файл не существует!" fi
 
 
                                   #!/bin/bash                       
-                                                                      
+                                  
                                    if [[  -lt 6 ]]; then            
-                                                                      
+                                  
                                        echo Да                       
-                                                                      
+                                  
  4                                  fi                                
 
 
@@ -334,21 +334,21 @@ else echo Не верно fi
 
 
                                   #!/bin/bash                       
-                                                                      
+                                  
                                    a=""                             
-                                                                      
+                                  
                                    b=""                             
-                                                                      
+                                  
  4                                  if [[  = "$a" &&  = "$b" ]] ;   
-                                    then                              
- 5                                                                    
-                                        echo Верно                    
- 6                                                                    
-                                    else                              
- 7                                                                    
-                                        echo Не верно                 
- 8                                                                    
-                                    fi                                
+then                              
+ 5                                
+echo Верно                    
+ 6                                
+else                              
+ 7                                
+echo Не верно                 
+ 8                                
+fi                                
 
 
 Если первое выражение  =  (истина) тогда выполняем второе, и если
@@ -359,33 +359,22 @@ else echo Не верно fi
 
 Bash
                                   #!/bin/bash                       
-                                                                      
+                                  
                                    a=""                             
-                                                                      
+                                  
                                    b=""                             
-                                                                      
- 4                                  if [[  = "$a" &&  = "$b" ]] ;   
-                                    then                              
- 5                                                                    
-                                        echo Верно                    
- 6                                                                    
-                                    else                              
- 7                                                                    
-                                        echo Не верно                 
- 8                                                                    
-                                    fi                                
-
-
- 
-
-Можно конечно сделать проще, нам главное понять принцип ifthen и else,
+                                  
+                                  
+if [[  = "$a" &&  = "$b" ]] ; then                              
+echo Верно                    
+                              
+else                              
+                              
+echo Не верно                 
+           делать проще, нам главное понять принцип `ifthen` и `else`,
 не стесняйтесь менять, подставляя свои значения.
 
-### Вложение нескольких проверок
-
- 
-
- `Bash`  позволяет вкладывать в блок несколько блоков
+### Вложение нескольких проверок вкладывать в блок несколько блоков
 
 ```Bash
 #!/bin/bash if [[ condition 1 ]]; then if [[ condition  ]]; then
@@ -395,20 +384,20 @@ command 1 else command  fi else command  fi
 
 ```bash
 #!/bin/bash                       
-                                                                      
+                                  
 if [[ condition 1 ]]; then        
-                                                                      
+                                  
 if [[ condition  ]]; then    
-                                                                      
+                                  
 command 1                 
-                                                                      
+                                  
 else                          
-                                                                      
+                                  
 command                  
 else                              
-                                                                      
+                                  
 command  3                    
-                                                                      
+                                  
 fi
 ```                                
 
@@ -416,26 +405,22 @@ fi
 ### Построения многоярусных конструкций
 
 Для построения многоярусных конструкции, когда необходимо выполнять
-множество проверок лучше использовать `elif` — это краткая форма записи
-конструкции `else if`.
+множество проверок лучше использовать `elif` — это
 
 
-```bash
-if [[ condition 1 ]]; then        
-                                                                      
-command 2                                                        
+
 command 2                     
-                                                                      
+                                  
 elif [[ condition  ]]; then      
-                                                                      
+                                  
 command 3                     
-                                                                      
+                                  
 command 4                     
-                                                                      
+                                  
 else                              
-                                                                      
+                                  
 command 5                     
-                                                                      
+                                  
 fi
 ```                                
 
