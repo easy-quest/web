@@ -11,19 +11,21 @@
         <meta name="author" content="Easy Quest">
       
       
-      <link rel="icon" href="/web/assets/images/favicon.png">
+        <link rel="canonical" href="https://easy-quest.github.io/web/adb/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
     
     
       
-        <title>My Docs</title>
+        <title>adb (Android Debug Bridge) - My Docs</title>
       
     
     
-      <link rel="stylesheet" href="/web/assets/stylesheets/main.bde7dde4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.bde7dde4.min.css">
       
         
-        <link rel="stylesheet" href="/web/assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
         
       
     
@@ -55,7 +57,7 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
   
     
-    <script>function __prefix(e){return new URL("/web/",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -64,6 +66,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#device-basics" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -71,7 +78,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/web/." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -95,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              adb (Android Debug Bridge)
             
           </span>
         </div>
@@ -188,7 +195,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/web/." class="md-tabs__link">
+    <a href=".." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -197,10 +204,12 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="/web/adb/" class="md-tabs__link">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
       adb (Android Debug Bridge)
     </a>
   </li>
@@ -212,7 +221,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/web/zsh/" class="md-tabs__link">
+    <a href="../zsh/" class="md-tabs__link">
       zsh
     </a>
   </li>
@@ -238,7 +247,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/web/." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -275,7 +284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         Home
       </a>
     </li>
@@ -288,11 +297,107 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/web/adb/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          adb (Android Debug Bridge)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         adb (Android Debug Bridge)
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#device-basics" class="md-nav__link">
+    Device Basics
+  </a>
+  
+    <nav class="md-nav" aria-label="Device Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logcat" class="md-nav__link">
+    Logcat
+  </a>
+  
+    <nav class="md-nav" aria-label="Logcat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-management" class="md-nav__link">
+    File Management
+  </a>
+  
+    <nav class="md-nav" aria-label="File Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-shell" class="md-nav__link">
+    Remote Shell
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -305,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/zsh/" class="md-nav__link">
+      <a href="../zsh/" class="md-nav__link">
         zsh
       </a>
     </li>
@@ -319,11 +424,270 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#device-basics" class="md-nav__link">
+    Device Basics
+  </a>
+  
+    <nav class="md-nav" aria-label="Device Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logcat" class="md-nav__link">
+    Logcat
+  </a>
+  
+    <nav class="md-nav" aria-label="Logcat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-management" class="md-nav__link">
+    File Management
+  </a>
+  
+    <nav class="md-nav" aria-label="File Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-shell" class="md-nav__link">
+    Remote Shell
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                
+                  <h1>adb (Android Debug Bridge)</h1>
+                
+                <h3 id="device-basics">Device Basics<a class="headerlink" href="#device-basics" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Команда</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>adb devices</code></td>
+<td>Lists connected devices</td>
+</tr>
+<tr>
+<td><code>adb devices -l</code></td>
+<td>Lists connected devices and kind</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td><code>adb root</code></td>
+<td>Restarts adbd with root permissions</td>
+</tr>
+<tr>
+<td><code>adb start-server</code></td>
+<td>Starts the adb server</td>
+</tr>
+<tr>
+<td><code>adb kill-server</code></td>
+<td>Kills the adb server</td>
+</tr>
+<tr>
+<td><code>adb remount</code></td>
+<td>Remounts file system with read/write access</td>
+</tr>
+<tr>
+<td><code>adb reboot</code></td>
+<td>Reboots the device</td>
+</tr>
+<tr>
+<td><code>adb reboot bootloader</code></td>
+<td>Reboots the device into fastboot</td>
+</tr>
+<tr>
+<td><code>adb disable-verity</code></td>
+<td>Reboots the device into fastboot</td>
+</tr>
+</tbody>
+</table>
+<p><code>wait-for-device</code> can be specified after <code>adb</code> to ensure that the command will run once the device is connected.</p>
+<p><code>-s</code> can be used to send the commands to a specific device when multiple are connected.</p>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>$ adb wait-for-device devices
+ List of devices attached
+ somedevice-1234 device
+ someotherdevice-1234 device
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>$ adb -s somedevice-1234 root
+</code></pre></div>
+<h3 id="logcat">Logcat<a class="headerlink" href="#logcat" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Команда</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>adb logcat</code></td>
+<td>Starts printing log messages to stdout</td>
+</tr>
+<tr>
+<td><code>adb logcat -g</code></td>
+<td>Displays current log buffer sizes</td>
+</tr>
+<tr>
+<td><code>adb logcat -G &lt;size&gt;</code></td>
+<td>Sets the buffer size (K or M)</td>
+</tr>
+<tr>
+<td><code>adb logcat -c</code></td>
+<td>Clears the log buffers</td>
+</tr>
+<tr>
+<td><code>adb logcat *:V</code></td>
+<td>Enables ALL log messages (verbose)</td>
+</tr>
+<tr>
+<td><code>adb logcat -f &lt;filename&gt;</code></td>
+<td>Dumps to specified file</td>
+</tr>
+</tbody>
+</table>
+<h4 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>$ adb logcat -G 16M
+$ adb logcat *:V &gt; output.log
+</code></pre></div>
+<h3 id="file-management">File Management<a class="headerlink" href="#file-management" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Команда</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>adb push &lt;local&gt; &lt;remote&gt;</code></td>
+<td>Copies the local to the device at remote</td>
+</tr>
+<tr>
+<td><code>adb pull &lt;remote&gt; &lt;local&gt;</code></td>
+<td>Copies the remote from the device to local</td>
+</tr>
+</tbody>
+</table>
+<h4 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>$ echo &quot;This is a test&quot; &gt; test.txt
+$ adb push  test.txt /sdcard/test.txt
+$ adb pull /sdcard/test.txt pulledTest.txt
+</code></pre></div>
+<h3 id="remote-shell">Remote Shell<a class="headerlink" href="#remote-shell" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Команда</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>adb shell &lt;command&gt;</code></td>
+<td>Запускает указанную команду на устройстве</td>
+</tr>
+<tr>
+<td><code>adb shell wm size</code></td>
+<td>Отображает текущее разрешение экрана</td>
+</tr>
+<tr>
+<td><code>adb shell wm size WxH</code></td>
+<td>Устанавливает разрешение к WXH</td>
+</tr>
+<tr>
+<td><code>adb shell pm list packages</code></td>
+<td>Перечисляет все установленные пакеты</td>
+</tr>
+<tr>
+<td><code>adb shell pm list packages -3</code></td>
+<td>Перечисляет все установленные 3-й партийные пакеты</td>
+</tr>
+<tr>
+<td><code>adb shell monkey -p app.package.name</code></td>
+<td>Запускает указанный пакет</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+
 
               
             </article>
@@ -334,6 +698,39 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href=".." class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../zsh/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              zsh
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -416,10 +813,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/web/", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "/web/assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
     
     
-      <script src="/web/assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      <script src="../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
       
     
   </body>
