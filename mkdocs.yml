@@ -58,7 +58,6 @@ theme:
 # Plugins
 
 # Customization
-<<<<<<< HEAD
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -74,22 +73,6 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://easy-quest.github.io/web/mkdocs build
       
-=======
-# extra:
-#   social:
-#     - icon: fontawesome/brands/github
-#       link: https://github.com/squidfunk
-#     - icon: fontawesome/brands/gitter
-#       link: https://gitter.im/squidfunk/mkdocs-material
-#     - icon: fontawesome/brands/docker
-#       link: https://hub.docker.com/r/squidfunk/mkdocs-material/
-#     - icon: fontawesome/brands/twitter
-#       link: https://twitter.com/squidfunk
-#     - icon: fontawesome/brands/linkedin
-#       link: https://linkedin.com/in/squidfunk/
-#     - icon: fontawesome/brands/instagram
-#       link: https://instagram.com/squidfunk
-
 # Extensions
 markdown_extensions:
   - admonition
@@ -129,4 +112,3 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
->>>>>>> aa3506ace163df87da0eb712933b60bc428d3075
