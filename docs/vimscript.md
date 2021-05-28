@@ -1,12 +1,3 @@
----
-title: Vim scripting
-category: Vim
-prism_languages: [vim]
-layout: 2017/sheet
-updated: 2020-07-05
-weight: -10
-tags: [Featurable]
----
 
 ### Start hacking
 
@@ -15,7 +6,7 @@ let name = "John"
 echo "Hello, " . name
 ```
 
-You can either put this in a script (`script.vim`) and run it (`:source script.vim`), or you can type the commands individually in normal mode as `:let` and `:echo`.
+Вы можете поместить это в скрипт (`script.vim`) и запустите его (`:source script.vim`), или вы можете вводить команды индивидуально в нормальном режиме как `:let` а также `:echo`.
 
 ### Learn by example
 
