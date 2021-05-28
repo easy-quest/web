@@ -1,10 +1,6 @@
----
-title: adb (Android Debug Bridge)
-category: CLI
-layout: 2021/sheet
----
-
 ### Device Basics
+
+[[index]]
 
 | Команда                           | Описание                               |
 | ---                               | ---                                         |
@@ -57,7 +53,7 @@ $ adb logcat *:V > output.log
 
 | Команда                              | Описание                       |
 | ---                                  | ---                               |
-| `adb push <local> <remote>` | Copies the local to the device at remote   |
+| `adb push <local> <remote>` | Копирует локальное устройство на удаленное устройство  |
 | `adb pull <remote> <local>` | Copies the remote from the device to local |
 
 #### Examples

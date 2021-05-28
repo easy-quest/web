@@ -1,0 +1,124 @@
+{
+  "main": {
+    "id": "392c02e47db5553a",
+    "type": "split",
+    "children": [
+      {
+        "id": "605bd8c5223e3156",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "bash.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e40134205d473446",
+    "type": "split",
+    "children": [
+      {
+        "id": "17d0c758d6bac961",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6125d935f3ed1199",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "c24737cde19d38f2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4b33b65d858f762e",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f00dd4eab6f44401",
+    "type": "split",
+    "children": [
+      {
+        "id": "01eaf04a7d64165a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d91c09303df98427",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "bash.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ef58456f64187065",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          },
+          {
+            "id": "2d32d5814d1d4c56",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "bash.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "bash.md",
+    "Bash cheatsheet.md",
+    "zsh.md",
+    "index.md",
+    "adb.md",
+    "git-tricks.md"
+  ]
+}
