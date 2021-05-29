@@ -31,6 +31,7 @@ theme:
 
   # Значения по умолчанию, взятые из mkdocs_theme.yml
   language: ru
+  language: en 
   features:
     # - navigation.instant
     - navigation.sections
