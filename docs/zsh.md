@@ -1,9 +1,3 @@
----
-title: zsh
-category: CLI
-layout: 2017/sheet
----
-
 ### Выражения
 
 | Выражение         | Пример              | Описание
@@ -37,6 +31,6 @@ chsh -s `which zsh`
 
 ### Также см
 
-- [Bash cheatsheet](./bash)
+[[Bash cheatsheet]]
 
 ZSH в основном совместим с Bash, поэтому большинство всего в чит-таблице Баш также относится.
