@@ -4,17 +4,21 @@
 > More information: <https://www.gnu.org/software/grep/manual/grep.html>.
 
 - НАЙТИ ФРАЗУ В ФАЙЛАХ РЕКУРСИВНО ЧЕРЕЗ КОНСОЛЬ
-```
+```bash
 grep -iRlwn "фраза" /директория/где/искать
 ```
 
 - Search for a pattern within a file:
 
-`grep "{{search_pattern}}" {{path/to/file}}`
+```
+grep "{{search_pattern}}" {{path/to/file}}
+``` 
 
 - Search for an exact string (disables regular expressions):
 
-`grep --fixed-strings "{{exact_string}}" {{path/to/file}}`
+```
+grep --fixed-strings "{{exact_string}}" {{path/to/file}}
+```
 
 - Search for a pattern in all files recursively in a directory, showing line numbers of matches, ignoring binary files:
 
