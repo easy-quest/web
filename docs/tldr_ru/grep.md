@@ -3,20 +3,24 @@
 > Find patterns in files using regular expressions.
 > More information: <https://www.gnu.org/software/grep/manual/grep.html>.
 
-- НАЙТИ ФРАЗУ В ФАЙЛАХ РЕКУРСИВНО ЧЕРЕЗ КОНСОЛЬ
+- Вот как я обычно использую grep. -R рекурсивно переходить в подкаталоги, -n отображать номера строк совпадений, -i игнорировать регистр, -s подавлять сообщения «не существует» и «не может прочитать», -Я игнорирую двоичные файлы (технически обрабатываю их как не имеющие совпадений, важно для отображения инвертированных результатов с помощью -v) У меня также есть **alias grep** на `grep --color = auto`, но это вопрос форматирования, а не функции.
+```
+grep -RnisI <шаблон> *
+```
 ```
 grep -iRlwn "фраза" /директория/где/искать
 ```
 
-- Search for a pattern within a file:
+
+- Поиск шаблона в файле:
 
 `grep "{{search_pattern}}" {{path/to/file}}`
 
-- Search for an exact string (disables regular expressions):
+- Поиск точной строки (отключение регулярных выражений):
 
 `grep --fixed-strings "{{exact_string}}" {{path/to/file}}`
 
-- Search for a pattern in all files recursively in a directory, showing line numbers of matches, ignoring binary files:
+- Искать шаблон во всех файлах рекурсивно в каталоге, показывая номера строк совпадений, игнорируя двоичные файлы:
 
 `grep --recursive --line-number --binary-files={{without-match}} "{{search_pattern}}" {{path/to/directory}}`
 
@@ -39,3 +43,9 @@ grep -iRlwn "фраза" /директория/где/искать
 - Search stdin for lines that do not match a pattern:
 
 `cat {{path/to/file}} | grep --invert-match "{{search_pattern}}"`
+
+- Печать графического дерева каталогов из текущего каталога 
+
+```
+ls -R | grep ": $" | sed -e 's /: $ //' -e 's / [^ -] [^ \ /] * \ // - / g' -e 's / ^ / /' -e 's / - / | / '
+```
