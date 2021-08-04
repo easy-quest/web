@@ -57,6 +57,10 @@ theme:
     logo: logo
 
 # Plugins
+plugins:
+    - search:
+       lang: en
+       lang: ru
 
 # Customization
 extra:
