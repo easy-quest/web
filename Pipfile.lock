@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "44cbe823cb7b16cd1845fe2d0584134db1138d542328bc902c46fce3bbc4d295"
+            "sha256": "c879329ba8a043805d909b901e0e0f21b6162e16c6484b7828a378168c0a21f9"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -145,6 +145,14 @@
             ],
             "index": "pypi",
             "version": "==0.4.0"
+        },
+        "mkdocs-windmill-dark": {
+            "hashes": [
+                "sha256:c07ef2bafaf943be3060d731cbd8ec8b89f81750ed10ca724471d479f972ec3e",
+                "sha256:e83f1e2f914e97ae0cec5deabdaa2682d09a27d633004a10b0043f06d03f225c"
+            ],
+            "index": "pypi",
+            "version": "==0.2.0"
         },
         "packaging": {
             "hashes": [
