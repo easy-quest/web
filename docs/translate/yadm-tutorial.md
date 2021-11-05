@@ -1,43 +1,60 @@
 # General Commands Manual
 
- ***yadm - Yet Another Dotfiles Manager***
+**yadm - Yet Another Dotfiles Manager***
 
 
 ```shell
 yadm command [options]
-
+```
+```shell
 yadm git-command-or-alias [options]
-
+```
+```shell
 yadm init [-f] [-w dir]
-
+```
+```shell
 yadm clone url [-f] [-w dir] [-b branch] [--bootstrap] [--no-bootstrap]
-
+```
+```shell
 yadm config name [value]
-
+```
+```shell
 yadm config [-e]
-
+```
+```shell
 yadm list [-a]
-
+```
+```shell
 yadm bootstrap
-
+```
+```shell
 yadm encrypt
-
+```
+```shell
 yadm decrypt [-l]
-
+```
+```shell
 yadm alt
-
+```
+```shell
 yadm perms
-
+```
+```shell
 yadm enter [ command ]
-
+```
+```shell
 yadm git-crypt [ options ]
-
+```
+```shell
 yadm transcrypt [ options ]
-
+```
+```shell
 yadm upgrade [-f]
-
+```
+```shell
 yadm introspect category
 ```
+
 
 DESCRIPTION yadm is a tool for managing a collection of files across
 multiple computers, using a shared Git repository. In addition, yadm
