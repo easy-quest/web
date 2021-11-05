@@ -1,4 +1,4 @@
-yadm(1) General Commands Manual yadm(1) NAME yadm - Yet Another Dotfiles Manager 
+General Commands Manual yadm - Yet Another Dotfiles Manager
 SYNOPSIS
        yadm command [options] yadm git-command-or-alias [options] yadm init [-f] 
        [-w dir] yadm clone url [-f] [-w dir] [-b branch] [--bootstrap] 
@@ -11,6 +11,7 @@ DESCRIPTION yadm is a tool for managing a collection of files across multiple
        feature to select alternate versions of files for particular systems. 
        Lastly, yadm supplies the ability to manage a subset of secure files, 
        which are encrypted before they are included in the repository.
+
 COMMANDS git-command or git-alias Any command not internally handled by yadm is 
               passed through to git(1).  Git commands or aliases are invoked 
               with the yadm managed repository.  The working directory for Git 
@@ -435,8 +436,19 @@ FILES All of yadm's configurations are relative to the "yadm directory". yadm
               of globs used for encrypt/decrypt
        $YADM_DATA/archive All files encrypted with yadm encrypt are stored in 
               this file.
-EXAMPLES yadm init Create an empty repo for managing files yadm add 
-       .bash_profile ; yadm commit
+
+#### EXAMPLES
+
+````bash
+# Создайте пустое репозиторий для управления файлами
+yadm init
+````
+
+````bash
+ yadm add .bash_profile ; yadm commit
+````
+
+
               Add .bash_profile to the Git index and create a new commit yadm 
        remote add origin <url>
               Add a remote origin to an existing repository yadm push -u origin 
@@ -448,6 +460,8 @@ EXAMPLES yadm init Create an empty repo for managing files yadm add
               Commit a new set of encrypted files REPORTING BUGS Report issues 
        or create pull requests at GitHub: 
        https://github.com/TheLocehiliosan/yadm/issues
-AUTHOR Tim Byrne <sultan@locehilios.com> SEE ALSO git(1), gpg(1) openssl(1) 
-       transcrypt(1) git-crypt(1) https://yadm.io/
-3.1.0 3 April 2021 yadm(1)
+
+
+*AUTHOR Tim Byrne <sultan@locehilios.com> * https://yadm.io/
+
+_3.1.0 3 April 2021 _
