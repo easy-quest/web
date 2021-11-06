@@ -70,6 +70,4 @@ python manage.py makemigration
 python manage.py migrate
 ```
 
-**Спасибо, что дочитали до конца. Вы меня очень поддержите, если поставите "Лайк", оставите комментарий или** [**ПОДПИШИТЕСЬ**](https://zen.yandex.ru/id/5cab3ea044061700afead675?integration=publishers_platform_yandex) **на мой канал :)**
-
 ######tags: [python,translate,trans]
