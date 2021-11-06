@@ -15,25 +15,28 @@ author: Ivan Yastrebov
 
 Открываем файл settings.py и находим дефолтные настройки БД:
 
-> DATABASES = {  
-> 'default': {  
-> 'ENGINE': 'django.db.backends.sqlite3',  
-> 'NAME': os.path.join(BASE\_DIR, 'db.sqlite3'),  
-> }  
-> }
-
+```python
+DATABASES = {  
+'default': {  
+'ENGINE': 'django.db.backends.sqlite3',  
+'NAME': os.path.join(BASE\_DIR, 'db.sqlite3'),  
+ }  
+}
+```
 Закомментируем их, можете удалить если не нужны или поменять на следующие:
 
-> DATABASES = {  
-> 'default': {  
-> 'ENGINE': 'django.db.backends.postgresql\_psycopg2',  
-> 'NAME': 'dbname',  
-> 'USER': 'username',  
-> 'PASSWORD': 'userpass',  
-> 'HOST': '127.0.0.1',  
-> 'PORT': '5432'  
-> }  
-> }
+ ```python
+ DATABASES = {  
+ 'default': {  
+ 'ENGINE': 'django.db.backends.postgresql\_psycopg2',  
+ 'NAME': 'dbname',  
+ 'USER': 'username',  
+ 'PASSWORD': 'userpass',  
+ 'HOST': '127.0.0.1',  
+ 'PORT': '5432'  
+ }  
+ }
+ ```
 
 Где:
 
@@ -47,16 +50,26 @@ author: Ivan Yastrebov
 
 В Linux:
 
-> $ pip install psycopg2-binary
+```shell
+pip install psycopg2-binary
+```
 
 В Windows:
 
-> $ pip install psycopg2
+```shell
+pip install psycopg2
+```
 
 Вот собственно и всё, осталось выполнить миграции.
 
-> $ python manage.py makemigrations  
-> $ python manage.py migrate
+```shell
+python manage.py makemigration
+```
+
+```shell
+python manage.py migrate
+```
 
 **Спасибо, что дочитали до конца. Вы меня очень поддержите, если поставите "Лайк", оставите комментарий или** [**ПОДПИШИТЕСЬ**](https://zen.yandex.ru/id/5cab3ea044061700afead675?integration=publishers_platform_yandex) **на мой канал :)**
-###### tags: []
+
+######tags: [python,translate,trans]
