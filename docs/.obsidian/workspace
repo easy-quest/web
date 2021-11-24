@@ -1,0 +1,107 @@
+{
+  "main": {
+    "id": "6da093c6e5a6b023",
+    "type": "split",
+    "children": [
+      {
+        "id": "db15fffc2067d7a0",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Cherre/First.md",
+            "mode": "source"
+          }
+        },
+        "group": "9e44517a204b02f2"
+      },
+      {
+        "id": "6d1f9d0aa26f4e77",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Cherre/First.md",
+            "mode": "preview"
+          }
+        },
+        "group": "9e44517a204b02f2"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e40f7327efd54380",
+    "type": "split",
+    "children": [
+      {
+        "id": "ed8292f6b765e30b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e00c7bcefee077e0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "26b9b9cada8d2651",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "e2003fbb0de2862e",
+    "type": "split",
+    "children": [
+      {
+        "id": "a93496bc1f83d8cc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e81b54e165d1af1b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Cherre/First.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "db15fffc2067d7a0",
+  "lastOpenFiles": [
+    "Cherre/First.md"
+  ]
+}
