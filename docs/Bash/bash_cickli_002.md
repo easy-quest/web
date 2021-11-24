@@ -408,6 +408,6 @@ _Поиск исполняемых файлов в папках из перем�
 
 
 
-###### tags: [bash,script] by EasyQuest
+`###### tags: [bash,script] by EasyQuest`
 
 

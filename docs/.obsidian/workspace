@@ -6,26 +6,28 @@
       {
         "id": "db15fffc2067d7a0",
         "type": "leaf",
+        "dimension": 50.19880715705766,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cherre/First.md",
+            "file": "Bash/bash_скрипты_часть_004.md",
             "mode": "source"
           }
         },
-        "group": "9e44517a204b02f2"
+        "group": "46d99726bcfbd894"
       },
       {
-        "id": "6d1f9d0aa26f4e77",
+        "id": "4210596f205a8e10",
         "type": "leaf",
+        "dimension": 49.80119284294234,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cherre/First.md",
-            "mode": "preview"
+            "file": "Bash/bash_скрипты_часть_004.md",
+            "mode": "source"
           }
         },
-        "group": "9e44517a204b02f2"
+        "group": "46d99726bcfbd894"
       }
     ],
     "direction": "vertical"
@@ -65,8 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e2003fbb0de2862e",
@@ -82,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cherre/First.md",
+                "file": "Bash/bash_скрипты_часть_004.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,6 +103,15 @@
   },
   "active": "db15fffc2067d7a0",
   "lastOpenFiles": [
-    "Cherre/First.md"
+    "Bash/bash_скрипты_часть_004.md",
+    "bash/Bash-скрипты.md",
+    "Bash/bash-скрипты_часть_006.md",
+    "Bash/bash-скрипты_часть_005.md",
+    "Bash/bash_cickli_002.md",
+    "Bash/Bash-скрипты_003.md",
+    "Bash/Bash_scripts_nachalo_001.md",
+    "bash/images/Bash-it.png",
+    "bash/Bash_scripts_nachalo_001.md",
+    "bash/bash_cickli_002.md"
   ]
 }
