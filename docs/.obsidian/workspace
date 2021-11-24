@@ -4,30 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "db15fffc2067d7a0",
-        "type": "leaf",
-        "dimension": 50.19880715705766,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Bash/bash_скрипты_часть_004.md",
-            "mode": "source"
-          }
-        },
-        "group": "46d99726bcfbd894"
-      },
-      {
         "id": "4210596f205a8e10",
         "type": "leaf",
-        "dimension": 49.80119284294234,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Bash/bash_скрипты_часть_004.md",
+            "file": "Bash/bash_scripts_001.md",
             "mode": "source"
           }
         },
-        "group": "46d99726bcfbd894"
+        "group": "96dbc1c8b606f654"
+      },
+      {
+        "id": "52f342e5d4765a7f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Bash/bash_scripts_001.md",
+            "mode": "preview"
+          }
+        },
+        "group": "96dbc1c8b606f654"
       }
     ],
     "direction": "vertical"
@@ -83,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bash/bash_скрипты_часть_004.md",
+                "file": "Bash/bash_scripts_001.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,17 +99,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "db15fffc2067d7a0",
+  "active": "4210596f205a8e10",
   "lastOpenFiles": [
-    "Bash/bash_скрипты_часть_004.md",
-    "bash/Bash-скрипты.md",
-    "Bash/bash-скрипты_часть_006.md",
-    "Bash/bash-скрипты_часть_005.md",
-    "Bash/bash_cickli_002.md",
-    "Bash/Bash-скрипты_003.md",
-    "Bash/Bash_scripts_nachalo_001.md",
-    "bash/images/Bash-it.png",
-    "bash/Bash_scripts_nachalo_001.md",
-    "bash/bash_cickli_002.md"
+    "Bash/bash_scripts_001.md",
+    "Bash/bash_scripts_002.md",
+    "Bash/bash_scripts_003.md",
+    "Bash/bash_scripts_007.md",
+    "Bash/bash_scripts_006.md",
+    "Bash/bash_scripts_005.md",
+    "Bash/bash_scripts_004.md",
+    "Bash/bash_scripts_008.md",
+    "Bash/bash_scripts_009.md",
+    "Bash/bash_scripts_010.md"
   ]
 }

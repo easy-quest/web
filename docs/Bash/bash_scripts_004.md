@@ -4,18 +4,14 @@ source: https://habr.com/ru/company/ruvds/blog/326594/
 author: Ivan Yastrebov
 ---
 
-# Bash-скрипты, часть 4: ввод и вывод
+Bash-скрипты, часть 4
+===
+ввод и вывод
+---
 
 ---
 
 В прошлый раз, в третьей части этой серии материалов по bash-скриптам, мы говорили о параметрах командной строки и ключах. Наша сегодняшняя тема — ввод, вывод, и всё, что с этим связано.
-
-![image](https://habrastorage.org/r/w1560/files/803/892/bfe/803892bfe548499aa763df324d40fd01.png)
-
-](https://habrahabr.ru/company/ruvds/blog/326594/)
-
-
-[![](https://habrastorage.org/r/w1560/files/1ba/550/d25/1ba550d25e8846ce8805de564da6aa63.png)](https://ruvds.com/ru-rub/#order)
 
 Вы уже знакомы с двумя методами работы с тем, что выводят сценарии командной строки:
 
