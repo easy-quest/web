@@ -45,8 +45,13 @@ curl -Lks http://bit.do/cfg-init | /bin/bash
 
 После выполнения установки любой файл в `$HOME`папке может быть изменен с помощью обычных команд, `git`заменив его вашим вновь созданным `config`псевдонимом, например:
 
-```
-config statusconfig add .vimrcconfig commit -m "Add vimrc"config add .bashrcconfig commit -m "Add bashrc"config push
+```shell
+config status
+config add .vimr
+cconfig commit -m "Add vimrc"
+config add .bashrc
+config commit -m "Add bashrc"
+config push
 ```
 
 ## Установите файлы точек в новую систему (или перейдите к этой установке)
@@ -55,25 +60,25 @@ config statusconfig add .vimrcconfig commit -m "Add vimrc"config add .b
 
 -   Перед установкой убедитесь, что вы присвоили псевдоним своему `.bashrc`или`.zsh`:
 
-```
+```shell
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
 
 -   И что ваш исходный репозиторий игнорирует папку, в которую вы его клонируете, чтобы не создавать странных проблем с рекурсией:
 
-```
+```shell
 echo ".cfg" >> .gitignore
 ```
 
 -   Теперь клонируйте свои точечные файлы в [пустой](http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/) репозиторий в папке "_точка_" вашего`$HOME`:
 
-```
+```shell
 git clone --bare <git-repo-url> $HOME/.cfg
 ```
 
 -   Определите псевдоним в текущей области оболочки:
 
-```
+```shell
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
 
@@ -81,43 +86,54 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 -   Описанный выше шаг может завершиться ошибкой с сообщением типа:
 
-```
-error: The following untracked working tree files would be overwritten by checkout:    .bashrc    .gitignorePlease move or remove them before you can switch branches.Aborting
+```shell
+error: The following untracked working tree files would be overwritten by checkout:    
+	.bashrc    
+	.gitignore
+Please move or remove them before you can switch branches.
+Aborting
 ```
 
 Это связано с тем, что в вашей `$HOME`папке уже могут быть некоторые стандартные файлы конфигурации, которые будут перезаписаны Git. Решение простое: создайте резервные копии файлов, если они вам небезразличны, удалите их, если вам все равно. Я предоставляю вам возможный приблизительный ярлык, чтобы автоматически переместить все файлы-нарушители в папку резервного копирования:
 
-```
-mkdir -p .config-backup && \config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \xargs -I{} mv {} .config-backup/{}
+```shell
+mkdir -p .config-backup && \
+config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+xargs -I{} mv {} .config-backup/{}
 ```
 
 -   Повторите проверку, если у вас возникли проблемы:
 
 -   Установите флажок `showUntrackedFiles``no`в этом конкретном (локальном) репозитории:
 
-```
+```shell
 config config --local status.showUntrackedFiles no
 ```
 
 -   Вы закончили, теперь вы можете вводить `config`команды для добавления и обновления файлов точек:
 
-```
-config statusconfig add .vimrcconfig commit -m "Add vimrc"config add .bashrcconfig commit -m "Add bashrc"config push
+```shell
+config status
+config add .vimrc
+config commit -m "Add vimrc"
+config add .bashrc
+config commit -m "Add bashrc"
+config push
 ```
 
 Опять же, в качестве ярлыка, чтобы не запоминать все эти шаги на любой новой машине, которую вы хотите настроить, вы можете создать простой скрипт, [сохранить его в виде фрагмента Bitbucket](https://bitbucket.org/snippets/nicolapaolucci/7rE9K), как это сделал я, [создать короткий URL](http://bit.do/)\-адрес для него и назвать его так:
 
-```
+```shell
 curl -Lks http://bit.do/cfg-install | /bin/bash
 ```
 
 Для полноты картины это то, что я получил (протестировал на многих свежеиспеченных [](http://www.alpinelinux.org/)контейнерах Alpine Linux, чтобы проверить это):
 
-```
+```bash
 git clone --bare https://bitbucket.org/durdn/cfg.git $HOME/.cfgfunction config {   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@}mkdir -p .config-backupconfig checkoutif [ $? = 0 ]; then  echo "Checked out config.";  else    echo "Backing up pre-existing dot files.";    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}fi;config checkoutconfig config status.showUntrackedFiles no
 ```
 
 ## Завершение
 
 Я надеюсь, что вы найдете этот метод полезным для отслеживания вашей конфигурации. Если вам интересно, [мои файлы dot живут здесь](https://bitbucket.org/durdn/cfg.git). Также, пожалуйста, оставайтесь на связи, подписавшись [на @durdn](https://www.twitter.com/durdn) или мою потрясающую команду в [@atlassiandev](https://www.twitter.com/atlassiandev).
-######tags: []
+`######tags: [git, dotfiles]`
