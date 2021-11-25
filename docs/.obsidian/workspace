@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Bash/bash_scripts_001.md",
+            "file": "Bash/bash_scripts_011.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Bash/bash_scripts_001.md",
+            "file": "Bash/bash_scripts_011.md",
             "mode": "preview"
           }
         },
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bash/bash_scripts_001.md",
+                "file": "Bash/bash_scripts_011.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,15 +101,15 @@
   },
   "active": "4210596f205a8e10",
   "lastOpenFiles": [
-    "Bash/bash_scripts_001.md",
-    "Bash/bash_scripts_002.md",
-    "Bash/bash_scripts_003.md",
+    "Bash/bash_scripts_011.md",
+    "Bash/bash_scripts_010.md",
+    "Bash/bash_scripts_009.md",
+    "Bash/bash_scripts_008.md",
     "Bash/bash_scripts_007.md",
     "Bash/bash_scripts_006.md",
     "Bash/bash_scripts_005.md",
     "Bash/bash_scripts_004.md",
-    "Bash/bash_scripts_008.md",
-    "Bash/bash_scripts_009.md",
-    "Bash/bash_scripts_010.md"
+    "Bash/bash_scripts_003.md",
+    "Bash/bash_scripts_002.md"
   ]
 }
