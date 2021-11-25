@@ -14,7 +14,7 @@ repo_url: https://github.com/easy-quest/web
 edit_uri: ""
 
 # Copyright
-copyright: Copyright &copy; 2021 - 2022 Easy Quest
+copyright: Copyright &copy; 2052 Easy Quest
 
 # Configuration
 theme:
@@ -113,3 +113,18 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+
+docs/Bash/
+├── bash_scripts_001.md
+├── bash_scripts_002.md
+├── bash_scripts_003.md
+├── bash_scripts_004.md
+├── bash_scripts_005.md
+├── bash_scripts_006.md
+├── bash_scripts_007.md
+├── bash_scripts_008.md
+├── bash_scripts_009.md
+├── bash_scripts_010.md
+└── bash_scripts_011.md
+
