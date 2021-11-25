@@ -115,7 +115,8 @@ markdown_extensions:
   - pymdownx.tilde
 
 
-docs/Bash/
+docs/
+  Bash/
 ├── bash_scripts_001.md
 ├── bash_scripts_002.md
 ├── bash_scripts_003.md
