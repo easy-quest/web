@@ -37,8 +37,8 @@ copyright: Copyright &copy; 2052 Easy Quest
 # Configuration
 theme:
   name: material
-  # custom_dir: !ENV [THEME_DIR, "material"]
-  custom_dir: overrides
+  custom_dir: !ENV [THEME_DIR, "material"]
+  # custom_dir: material
 
   # Static files
   static_templates:
