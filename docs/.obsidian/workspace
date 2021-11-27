@@ -6,10 +6,11 @@
       {
         "id": "52f342e5d4765a7f",
         "type": "leaf",
+        "dimension": 50.49701789264414,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Repl.it/Веб-парсинг для начинающих с Python и Replit.md",
+            "file": "index.md",
             "mode": "source"
           }
         },
@@ -18,10 +19,11 @@
       {
         "id": "8a3bf400a981ca36",
         "type": "leaf",
+        "dimension": 49.50298210735586,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Repl.it/Веб-парсинг для начинающих с Python и Replit.md",
+            "file": "index.md",
             "mode": "preview"
           }
         },
@@ -65,8 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e2003fbb0de2862e",
@@ -82,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Repl.it/Веб-парсинг для начинающих с Python и Replit.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,17 +101,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8a3bf400a981ca36",
+  "active": "52f342e5d4765a7f",
   "lastOpenFiles": [
-    "Repl.it/Веб-парсинг для начинающих с Python и Replit.md",
-    "Shell/Практические Упражнения.md",
+    "index.md",
     "webscrapppingbook/lynx.md",
-    "Bash/bash_scripts_011.md",
-    "Bash/bash_scripts_010.md",
-    "Bash/bash_scripts_009.md",
-    "Bash/bash_scripts_008.md",
-    "Bash/bash_scripts_007.md",
-    "Bash/bash_scripts_006.md",
-    "Bash/bash_scripts_005.md"
+    "translate/yadm-tutorial.md",
+    "translate/nano.17432.save.md",
+    "Termux/Termux_Python.md",
+    "Python/svoi_perevodchik_s_raznyh_iazykov_na_python.md",
+    "Python/Как_подключить_Postgres_k_Django.md",
+    "Плагины/Zettelkasten.md",
+    "Кастомизация/Внешний вид.md",
+    "Кастомизация/Пользовательские сочетания клавиш.md"
   ]
 }

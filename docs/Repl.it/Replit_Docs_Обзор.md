@@ -189,6 +189,6 @@ author: Ivan Yastrebov
 
 Вот пример [готового приложения](https://seeder.datadesigns.repl.co/) .
 
-###### tags: [python,repl] by EasyQuest
+`###### tags: [python,repl] by EasyQuest`
 
 Веб-парсинг для начинающих с Python и Replit

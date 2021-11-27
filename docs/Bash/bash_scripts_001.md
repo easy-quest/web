@@ -2,7 +2,6 @@
 created: 2021-08-29T16:37:45 (UTC +03:00)
 source: https://habr.com/ru/company/ruvds/blog/326594/
 author: Ivan Yastrebov
-title: Bash-скрипты начало
 ---
 
 Bash-скрипты, часть 1

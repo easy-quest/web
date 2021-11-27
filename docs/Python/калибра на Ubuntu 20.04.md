@@ -248,4 +248,4 @@ OutputUser mycalibreuser added successfully!
 
 Чтобы расширить проект, вы можете добавить больше книг из своей личной библиотеки или из [Project Gutenberg](https://www.gutenberg.org/) , [Standard Ebooks](https://standardebooks.org/) или где-либо еще. Не забывайте всегда соблюдать все законы об авторском праве, связанные с вашей библиотекой содержимого.
 
-###### tags: [] by EasyQuest
+`###### tags: [] by EasyQuest`

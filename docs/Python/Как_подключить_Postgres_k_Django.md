@@ -70,4 +70,4 @@ python manage.py makemigration
 python manage.py migrate
 ```
 
-######tags: [python,translate,trans]
+`######tags: [python,translate,trans]`

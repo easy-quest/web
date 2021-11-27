@@ -267,4 +267,4 @@ print(Counter(all_nouns).most_common(100))
 
 Предложить лучший вариант перевода
 
-###### tags: [python,repl ] by EasyQuest
+`###### tags: [python,repl ] by EasyQuest`

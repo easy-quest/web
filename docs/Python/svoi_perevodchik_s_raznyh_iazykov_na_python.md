@@ -53,4 +53,4 @@ print(result)
 
 ![pythontoday](https://avatars.mds.yandex.net/get-zen_doc/1889318/pub_5f857a928e35355ad1852a60_5f857cfaa144c35a270943dd/scale_1200)
 
-###### tags: []
+`###### tags: []`
