@@ -1,30 +1,25 @@
+#!/usr/bin/env bash
 #!/data/data/com.termux/files/usr/bin/env bash
+source baner.sh
 #=============================================================================
 # filename.toml --- bash script
 # Copyright (c) 2050 @EasyQuest
 # Author: Ivan Yastrebov < easy-quest@mail.ru >
 # URL: https://easy-quest.github.io/web/
 #=============================================================================
+banner
 
 MESSAGE="Сценарии оболочки - это весело!"
 echo "$MESSAGE"
 
 FILE="./.venv/bin/activate"
 
-function function_venv() {
-  #function_body
-  py3=$(command -v python3.10)
-  $py3 -m venv .venv
-}
-
-
-
 if [ -e "$FILE" ]
 then
   echo "Виртуаллное окружение существует"
 else
   echo "Виртуаллное окружение не установленно"
-  echo "Попытаюсь исправить"
+echo "Попытаюсь исправить"
   sleep 3
   function_venv
   if [ -e "$FILE" ]
@@ -73,4 +68,4 @@ fi
       # - public
 # ZZZ
 
-# esim.i2p.gitlab.io/web
+#⠣ esim.i2p.gitlab.io/web

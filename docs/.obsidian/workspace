@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Shell/Практические Упражнения.md",
+            "file": "Repl.it/Веб-парсинг для начинающих с Python и Replit.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Shell/Практические Упражнения.md",
+            "file": "Repl.it/Веб-парсинг для начинающих с Python и Replit.md",
             "mode": "preview"
           }
         },
@@ -82,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Shell/Практические Упражнения.md",
+                "file": "Repl.it/Веб-парсинг для начинающих с Python и Replit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,8 +100,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "52f342e5d4765a7f",
+  "active": "8a3bf400a981ca36",
   "lastOpenFiles": [
+    "Repl.it/Веб-парсинг для начинающих с Python и Replit.md",
     "Shell/Практические Упражнения.md",
     "webscrapppingbook/lynx.md",
     "Bash/bash_scripts_011.md",
@@ -110,7 +111,6 @@
     "Bash/bash_scripts_008.md",
     "Bash/bash_scripts_007.md",
     "Bash/bash_scripts_006.md",
-    "Bash/bash_scripts_005.md",
-    "Bash/bash_scripts_004.md"
+    "Bash/bash_scripts_005.md"
   ]
 }
