@@ -38,7 +38,7 @@ copyright: Copyright &copy; 2052 Easy Quest
 theme:
   name: material
   # custom_dir: !ENV [THEME_DIR, "material"]
-  custom_dir: material
+  custom_dir: overrides
 
   # Static files
   static_templates:
@@ -148,7 +148,7 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.superfences:
       custom_fences:
-        - name: mermaid
+        - name: null
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
