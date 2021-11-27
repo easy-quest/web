@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "webscrapppingbook/lynx.md",
+            "file": "Shell/Практические Упражнения.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "webscrapppingbook/lynx.md",
+            "file": "Shell/Практические Упражнения.md",
             "mode": "preview"
           }
         },
@@ -82,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "webscrapppingbook/lynx.md",
+                "file": "Shell/Практические Упражнения.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,10 +100,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8a3bf400a981ca36",
+  "active": "52f342e5d4765a7f",
   "lastOpenFiles": [
-    "webscrapppingbook/lynx.md",
     "Shell/Практические Упражнения.md",
+    "webscrapppingbook/lynx.md",
     "Bash/bash_scripts_011.md",
     "Bash/bash_scripts_010.md",
     "Bash/bash_scripts_009.md",
