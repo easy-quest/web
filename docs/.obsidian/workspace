@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "big-data-manipulation/retrieving-webpages-using-wget-curl-and-lynx.md",
+            "file": "big-data-manipulation/lynx.md",
             "mode": "source"
           }
         },
@@ -23,7 +23,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "big-data-manipulation/retrieving-webpages-using-wget-curl-and-lynx.md",
+            "file": "big-data-manipulation/lynx.md",
             "mode": "preview"
           }
         },
@@ -83,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "big-data-manipulation/retrieving-webpages-using-wget-curl-and-lynx.md",
+                "file": "big-data-manipulation/lynx.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
   },
   "active": "52f342e5d4765a7f",
   "lastOpenFiles": [
-    "big-data-manipulation/retrieving-webpages-using-wget-curl-and-lynx.md",
+    "big-data-manipulation/lynx.md",
     "big-data-manipulation/big-data-manipulation-for-fun-and-profit-part.md",
     "Apps/Go.md",
     "Shell/Практические упражнения - Отладка.md",
