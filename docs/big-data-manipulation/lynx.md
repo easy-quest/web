@@ -1,7 +1,7 @@
 Retrieving Webpages Using wget, curl and lynx
 ===
 
-
+```
    Whether you are an IT professional who needs to download 2000 online bug
    reports into a flat text file and parse them to see which ones need
    attention, or a mum who wants to download 20 recipes from an public domain
