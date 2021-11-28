@@ -24,7 +24,7 @@
           "type": "markdown",
           "state": {
             "file": "big-data-manipulation/retrieving-webpages-using-wget-curl-and-lynx.md",
-            "mode": "source"
+            "mode": "preview"
           }
         },
         "group": "b822594d6b489897"
@@ -101,7 +101,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8a3bf400a981ca36",
+  "active": "52f342e5d4765a7f",
   "lastOpenFiles": [
     "big-data-manipulation/retrieving-webpages-using-wget-curl-and-lynx.md",
     "big-data-manipulation/big-data-manipulation-for-fun-and-profit-part.md",

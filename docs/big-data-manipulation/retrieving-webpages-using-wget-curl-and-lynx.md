@@ -1,7 +1,6 @@
 Retrieving Webpages Using wget, curl and lynx
 ===
 
-   20 October 2020 by Roel Van de Paar
 
    Whether you are an IT professional who needs to download 2000 online bug
    reports into a flat text file and parse them to see which ones need
@@ -40,9 +39,7 @@ Software requirements and conventions used
 
  $ sudo apt-get install wget curl lynx
 
-     ----------------------------------------------------------------------
-
-     ----------------------------------------------------------------------
+  
 
    Once done, let’s get started!
 
@@ -72,12 +69,13 @@ Example 1: wget
  $ file linux-complex-bash-one-liner-examples
  linux-complex-bash-one-liner-examples: HTML document, ASCII text, with very long lines, with CRLF, CR, LF line terminators
  $ head -n5 linux-complex-bash-one-liner-examples
+ ```html
  <!DOCTYPE html>
  <html lang="en-gb" dir="ltr">
  <head>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+```
    Great, file (the file classification utility) recognizes the downloaded
    file as HTML, and the head confirms that first 5 lines (-n5) look like
    HTML code, and are text based.
@@ -99,16 +97,18 @@ Example 2: curl
 
  $ file linux-complex-bash-one-liner-examples
  linux-complex-bash-one-liner-examples: HTML document, ASCII text, with very long lines, with CRLF, CR, LF line terminators
- $ head -n5 linux-complex-bash-one-liner-examples
+ ```
+head -n5 linux-complex-bash-one-liner-examples
+```
+```html
  <!DOCTYPE html>
  <html lang="en-gb" dir="ltr">
  <head>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+```
 
-     ----------------------------------------------------------------------
 
-     ----------------------------------------------------------------------
 
    Great, the same result!
 
@@ -156,137 +156,3 @@ Example 3: lynx
    HTML-free text-based files which we can use to process further if so
    required.
 
-Conclusion
-
-   In this article, we had a short introduction to the wget, curl and lynx
-   tools, and we discovered how the latter can be used to retrieve web pages
-   in a textual format dropping all HTML content.
-
-   Please, always use the knowledge gained here responsibly: please do not
-   overload webservers, and only retrieve public domain, no-copyright, or
-   CC-0 etc. data/pages. Also always make sure to check if there is a
-   downloadable database/dataset of the data you are interested in, which is
-   much preferred to individually retrieving webpages.
-
-   Enjoy your new found knowledge, and, mum, looking forward to that cake for
-   which you downloaded the recipe using lynx --dump! If you dive into any of
-   the tools further, please leave us a comment with your discoveries.
-
-  Related Linux Tutorials:
-
-     * Big Data Manipulation for Fun and Profit Part 1
-     * Big Data Manipulation for Fun and Profit Part 3
-     * Big Data Manipulation for Fun and Profit Part 2
-     * Curl file download on Linux
-     * Wget file download on Linux
-     * Download file from URL on Linux using command line
-     * Things to install on Ubuntu 20.04
-     * How to use curl to get public IP address
-     * Things to do after installing Ubuntu 20.04 Focal Fossa Linux
-     * How to install Chef Server, Workstation and Chef…
-   Categories Programming & Scripting  Tags commands, database, scripting,
-   webserver Post navigation
-   Big Data Manipulation for Fun and Profit Part 2
-   Bash Background Process Management
-
-     ----------------------------------------------------------------------
-
-     ----------------------------------------------------------------------
-
-                            Comments and Discussions
-                                  Linux Forum
-
-     ----------------------------------------------------------------------
-
-  NEWSLETTER
-
-   Subscribe to Linux Career Newsletter to receive latest news, jobs, career
-   advice and featured configuration tutorials.
-
-   SUBSCRIBE
-
-  WRITE FOR US
-
-   LinuxConfig is looking for a technical writer(s) geared towards GNU/Linux
-   and FLOSS technologies. Your articles will feature various GNU/Linux
-   configuration tutorials and FLOSS technologies used in combination with
-   GNU/Linux operating system.
-
-   When writing your articles you will be expected to be able to keep up with
-   a technological advancement regarding the above mentioned technical area
-   of expertise. You will work independently and be able to produce at
-   minimum 2 technical articles a month.
-
-   APPLY NOW
-
-  CONTACT US
-
-   web ( at ) linuxconfig ( dot ) org
-
-TAGS
-
-   18.04 administration apache applications bash beginner browser centos
-   centos8 commands database debian desktop development docker fedora
-   filesystem firewall gaming gnome Hardware installation java kali manjaro
-   multimedia networking nvidia programming python redhat rhel rhel8
-   scripting security server ssh storage terminal ubuntu ubuntu 20.04 video
-   virtualization webapp webserver
-
-  FEATURED TUTORIALS
-
-     * How to install the NVIDIA drivers on Ubuntu 20.04 Focal Fossa Linux
-     * Bash Scripting Tutorial for Beginners
-     * How to check CentOS version
-     * How to find my IP address on Ubuntu 20.04 Focal Fossa Linux
-     * Ubuntu 20.04 Remote Desktop Access from Windows 10
-     * Howto mount USB drive in Linux
-     * How to install missing ifconfig command on Debian Linux
-     * AMD Radeon Ubuntu 20.04 Driver Installation
-     * Ubuntu Static IP configuration
-     * How to use bash array in a shell script
-     * Linux IP forwarding – How to Disable/Enable
-     * How to install Tweak Tool on Ubuntu 20.04 LTS Focal Fossa Linux
-     * How to enable/disable firewall on Ubuntu 18.04 Bionic Beaver Linux
-     * Netplan static IP on Ubuntu configuration
-     * How to change from default to alternative Python version on Debian
-       Linux
-     * Set Kali root password and enable root login
-     * How to Install Adobe Acrobat Reader on Ubuntu 20.04 Focal Fossa Linux
-     * How to install the NVIDIA drivers on Ubuntu 18.04 Bionic Beaver Linux
-     * How to check NVIDIA driver version on your Linux system
-     * Nvidia RTX 3080 Ethereum Hashrate and Mining Overclock settings on
-       HiveOS Linux
-
-  LATEST TUTORIALS
-
-     * How to perform administration operations with Ansible modules
-     * Introduction to Wake On Lan
-     * Introduction to YAML with Examples
-     * Hardening Kali Linux
-     * How to manipulate Excel spreadsheets with Python and openpyxl
-     * Ubuntu 22.04 Features and Release Date
-     * Ubuntu 22.04 Download
-     * How To Upgrade Ubuntu To 22.04 LTS Jammy Jellyfish
-     * Ansible loops examples and introduction
-     * How to use and install Rofi on Linux tutorial
-     * How to manage wireless connections using iwd on Linux
-     * Regain your Privacy and Security in Digital Era
-     * How to install Telegram on Linux
-     * Linux commands cheat sheet
-     * How to migrate Apache to Nginx by converting VirtualHosts to Server
-       Blocks
-     * How to tune Linux extended (ext) filesystems using dumpe2fs and
-       tune2fs
-     * SQLite Linux Tutorial for Beginners
-     * VirtualBox increase disk size on Linux
-     * wipefs Linux command tutorial with examples
-     * Megatools Linux install and Basic Introduction
-   © 2021 TOSID Group Pty Ltd - LinuxConfig.org
-   Close
-     * Linux Tutorials
-     * System Admin
-     * Programming
-     * Multimedia
-     * Forum
-     * Linux Commands
-     * Linux Jobs
