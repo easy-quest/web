@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Apps/Go.md",
+            "file": "big-data-manipulation/retrieving-webpages-using-wget-curl-and-lynx.md",
             "mode": "source"
           }
         },
@@ -23,8 +23,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Apps/Go.md",
-            "mode": "preview"
+            "file": "big-data-manipulation/retrieving-webpages-using-wget-curl-and-lynx.md",
+            "mode": "source"
           }
         },
         "group": "b822594d6b489897"
@@ -67,8 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e2003fbb0de2862e",
@@ -84,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Apps/Go.md",
+                "file": "big-data-manipulation/retrieving-webpages-using-wget-curl-and-lynx.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,17 +101,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "52f342e5d4765a7f",
+  "active": "8a3bf400a981ca36",
   "lastOpenFiles": [
-    "Apps/Go.md",
     "big-data-manipulation/retrieving-webpages-using-wget-curl-and-lynx.md",
+    "big-data-manipulation/big-data-manipulation-for-fun-and-profit-part.md",
+    "Apps/Go.md",
     "Shell/Практические упражнения - Отладка.md",
     "Shell/Практические Упражнения.md",
     "Templates/base.md",
     "index.md",
     "webscrapppingbook/lynx.md",
     "translate/yadm-tutorial.md",
-    "translate/nano.17432.save.md",
-    "Termux/Termux_Python.md"
+    "translate/nano.17432.save.md"
   ]
 }
