@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "index.md",
+            "file": "Apps/Go.md",
             "mode": "source"
           }
         },
@@ -23,7 +23,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "index.md",
+            "file": "Apps/Go.md",
             "mode": "preview"
           }
         },
@@ -67,7 +67,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e2003fbb0de2862e",
@@ -83,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "Apps/Go.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,15 +104,15 @@
   },
   "active": "52f342e5d4765a7f",
   "lastOpenFiles": [
+    "Apps/Go.md",
+    "big-data-manipulation/retrieving-webpages-using-wget-curl-and-lynx.md",
+    "Shell/Практические упражнения - Отладка.md",
+    "Shell/Практические Упражнения.md",
+    "Templates/base.md",
     "index.md",
     "webscrapppingbook/lynx.md",
     "translate/yadm-tutorial.md",
     "translate/nano.17432.save.md",
-    "Termux/Termux_Python.md",
-    "Python/svoi_perevodchik_s_raznyh_iazykov_na_python.md",
-    "Python/Как_подключить_Postgres_k_Django.md",
-    "Плагины/Zettelkasten.md",
-    "Кастомизация/Внешний вид.md",
-    "Кастомизация/Пользовательские сочетания клавиш.md"
+    "Termux/Termux_Python.md"
   ]
 }
