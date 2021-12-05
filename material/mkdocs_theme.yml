@@ -19,7 +19,7 @@
 # IN THE SOFTWARE.
 
 # Language for theme localization
-language: en
+language: ru
 
 # Text direction (can be ltr or rtl), default: ltr
 direction:
@@ -53,7 +53,7 @@ font:
 icon:
 
 # Favicon to be rendered
-favicon: assets/images/favicon.png
+favicon: assets/images/favicon.ico
 
 # Material includes the search in the header as a partial, not as a separate
 # template, so it's correct that search.html is missing
