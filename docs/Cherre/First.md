@@ -7,7 +7,7 @@ author: Ivan Yastrebov
 ---
 _Отказ от ответственности: название немного гиперболическое, есть и другие проверенные решения проблемы. Я действительно думаю, что техника, приведенная ниже, очень элегантна._
 
-Недавно я прочитал об этой удивительной технике в [новостях о хакерах](https://news.ycombinator.com/item?id=11070797), посвященных решениям людей для хранения своих [точечных](https://en.wikipedia.org/wiki/Dot-file)файлов. Пользователь `StreakyCobra` [показал свою элегантную настройку](https://news.ycombinator.com/item?id=11071754) и ... В этом было так много смысла! Я нахожусь в процессе переключения своей собственной системы на ту же технику. Единственным предварительным условием является установка [Git](https://www.atlassian.com/git).
+Недавно я прочитал об этой удивительной технике в [новостях о хакерах](https://news.ycombinator.com/item?id=11070797), посвященных решениям людей для хранения своих [точечных](https://en.wikipedia.org/wiki/Dot-file)файлов. Пользователь `StreakyCobra` [показал свою элегантную настройку](https://news.ycombinator.com/item?id=11071754) и ... В этом было так много смысла! Я нахожусь в процессе переключения своей собственной системы на ту же технику. Единственным предварительным условием является установка [Git](https://www.atlassian.com/git).
 
 По его словам, приведенная ниже методика требует:
 
@@ -19,17 +19,23 @@ _Отказ от ответственности: название немного
 
 Если вы раньше не отслеживали свои конфигурации в репозитории Git, вы можете легко начать использовать этот метод с следующих строк:
 
-```shell
-git init --bare $HOME/.cfg
+```bash
+git init --bare $HOME/.cfg
 ```
-```shell
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+---
+
+```bash
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
-```shell
-config config --local status.showUntrackedFiles no
+---
+
+```bash
+config config --local status.showUntrackedFiles no
 ```
-```shell
-echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+---
+
+```bash
+echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
 ```
 
 -   В первой строке создается папка`~/.cfg`, которая является репозиторием [Git](http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/), который будет отслеживать наши файлы.
@@ -40,18 +46,18 @@ echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" 
 Я упаковал вышеприведенные строки в [фрагмент](https://bitbucket.org/snippets/nicolapaolucci/ergX9) на Bitbucket и связал его с коротким URL-адресом. Чтобы вы могли наладить отношения с:
 
 ```shell
-curl -Lks http://bit.do/cfg-init | /bin/bash
+curl -Lks http://bit.do/cfg-init | /bin/bash
 ```
 
 После выполнения установки любой файл в `$HOME`папке может быть изменен с помощью обычных команд, `git`заменив его вашим вновь созданным `config`псевдонимом, например:
 
 ```shell
-config status
-config add .vimr
-cconfig commit -m "Add vimrc"
-config add .bashrc
-config commit -m "Add bashrc"
-config push
+config status
+config add .vimr
+cconfig commit -m "Add vimrc"
+config add .bashrc
+config commit -m "Add bashrc"
+config push
 ```
 
 ## Установите файлы точек в новую систему (или перейдите к этой установке)
@@ -61,25 +67,25 @@ config push
 -   Перед установкой убедитесь, что вы присвоили псевдоним своему `.bashrc`или`.zsh`:
 
 ```shell
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
 
 -   И что ваш исходный репозиторий игнорирует папку, в которую вы его клонируете, чтобы не создавать странных проблем с рекурсией:
 
 ```shell
-echo ".cfg" >> .gitignore
+echo ".cfg" >> .gitignore
 ```
 
 -   Теперь клонируйте свои точечные файлы в [пустой](http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/) репозиторий в папке "_точка_" вашего`$HOME`:
 
 ```shell
-git clone --bare <git-repo-url> $HOME/.cfg
+git clone --bare <git-repo-url> $HOME/.cfg
 ```
 
 -   Определите псевдоним в текущей области оболочки:
 
 ```shell
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
 
 -   Перенесите фактический контент из открытого репозитория на свой`$HOME`:
@@ -87,19 +93,19 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 -   Описанный выше шаг может завершиться ошибкой с сообщением типа:
 
 ```shell
-error: The following untracked working tree files would be overwritten by checkout:    
-	.bashrc    
+error: The following untracked working tree files would be overwritten by checkout:    
+	.bashrc    
 	.gitignore
-Please move or remove them before you can switch branches.
+Please move or remove them before you can switch branches.
 Aborting
 ```
 
 Это связано с тем, что в вашей `$HOME`папке уже могут быть некоторые стандартные файлы конфигурации, которые будут перезаписаны Git. Решение простое: создайте резервные копии файлов, если они вам небезразличны, удалите их, если вам все равно. Я предоставляю вам возможный приблизительный ярлык, чтобы автоматически переместить все файлы-нарушители в папку резервного копирования:
 
 ```shell
-mkdir -p .config-backup && \
-config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
-xargs -I{} mv {} .config-backup/{}
+mkdir -p .config-backup && \
+config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+xargs -I{} mv {} .config-backup/{}
 ```
 
 -   Повторите проверку, если у вас возникли проблемы:
@@ -107,30 +113,30 @@ xargs -I{} mv {} .config-backup/{}
 -   Установите флажок `showUntrackedFiles``no`в этом конкретном (локальном) репозитории:
 
 ```shell
-config config --local status.showUntrackedFiles no
+config config --local status.showUntrackedFiles no
 ```
 
 -   Вы закончили, теперь вы можете вводить `config`команды для добавления и обновления файлов точек:
 
 ```shell
-config status
-config add .vimrc
-config commit -m "Add vimrc"
-config add .bashrc
-config commit -m "Add bashrc"
-config push
+config status
+config add .vimrc
+config commit -m "Add vimrc"
+config add .bashrc
+config commit -m "Add bashrc"
+config push
 ```
 
 Опять же, в качестве ярлыка, чтобы не запоминать все эти шаги на любой новой машине, которую вы хотите настроить, вы можете создать простой скрипт, [сохранить его в виде фрагмента Bitbucket](https://bitbucket.org/snippets/nicolapaolucci/7rE9K), как это сделал я, [создать короткий URL](http://bit.do/)\-адрес для него и назвать его так:
 
 ```shell
-curl -Lks http://bit.do/cfg-install | /bin/bash
+curl -Lks http://bit.do/cfg-install | /bin/bash
 ```
 
 Для полноты картины это то, что я получил (протестировал на многих свежеиспеченных [](http://www.alpinelinux.org/)контейнерах Alpine Linux, чтобы проверить это):
 
 ```bash
-git clone --bare https://bitbucket.org/durdn/cfg.git $HOME/.cfgfunction config {   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@}mkdir -p .config-backupconfig checkoutif [ $? = 0 ]; then  echo "Checked out config.";  else    echo "Backing up pre-existing dot files.";    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}fi;config checkoutconfig config status.showUntrackedFiles no
+git clone --bare https://bitbucket.org/durdn/cfg.git $HOME/.cfgfunction config {   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@}mkdir -p .config-backupconfig checkoutif [ $? = 0 ]; then  echo "Checked out config.";  else    echo "Backing up pre-existing dot files.";    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}fi;config checkoutconfig config status.showUntrackedFiles no
 ```
 
 ## Завершение
