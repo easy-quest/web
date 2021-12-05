@@ -19,23 +19,21 @@ _Отказ от ответственности: название немного
 
 Если вы раньше не отслеживали свои конфигурации в репозитории Git, вы можете легко начать использовать этот метод с следующих строк:
 
-```bash
+```bash=
 git init --bare $HOME/.cfg
 ```
----
 
-```bash
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+```bash=
+alias zz='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+```
+
+```bash=
+zz config --local status.showUntrackedFiles no
 ```
 ---
 
-```bash
-config config --local status.showUntrackedFiles no
-```
----
-
-```bash
-echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+```bash=
+echo "alias zz='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.zshrc
 ```
 
 -   В первой строке создается папка`~/.cfg`, которая является репозиторием [Git](http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/), который будет отслеживать наши файлы.
@@ -45,19 +43,19 @@ echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $H
 
 Я упаковал вышеприведенные строки в [фрагмент](https://bitbucket.org/snippets/nicolapaolucci/ergX9) на Bitbucket и связал его с коротким URL-адресом. Чтобы вы могли наладить отношения с:
 
-```shell
+```shell=
 curl -Lks http://bit.do/cfg-init | /bin/bash
 ```
 
 После выполнения установки любой файл в `$HOME`папке может быть изменен с помощью обычных команд, `git`заменив его вашим вновь созданным `config`псевдонимом, например:
 
-```shell
-config status
-config add .vimr
-cconfig commit -m "Add vimrc"
-config add .bashrc
-config commit -m "Add bashrc"
-config push
+```bash=
+zz status
+zz add .vimr
+zz commit -m "Add vimrc"
+zz add .bashrc
+zz commit -m "Add bashrc"
+zz push
 ```
 
 ## Установите файлы точек в новую систему (или перейдите к этой установке)
@@ -66,33 +64,33 @@ config push
 
 -   Перед установкой убедитесь, что вы присвоили псевдоним своему `.bashrc`или`.zsh`:
 
-```shell
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+```shell=
+alias zz='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
 
 -   И что ваш исходный репозиторий игнорирует папку, в которую вы его клонируете, чтобы не создавать странных проблем с рекурсией:
 
-```shell
+```shell=
 echo ".cfg" >> .gitignore
 ```
 
 -   Теперь клонируйте свои точечные файлы в [пустой](http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/) репозиторий в папке "_точка_" вашего`$HOME`:
 
-```shell
+```shell=
 git clone --bare <git-repo-url> $HOME/.cfg
 ```
 
 -   Определите псевдоним в текущей области оболочки:
 
-```shell
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+```shell=
+alias zz='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
 
 -   Перенесите фактический контент из открытого репозитория на свой`$HOME`:
 
 -   Описанный выше шаг может завершиться ошибкой с сообщением типа:
 
-```shell
+```shell=
 error: The following untracked working tree files would be overwritten by checkout:    
 	.bashrc    
 	.gitignore
@@ -102,9 +100,9 @@ Aborting
 
 Это связано с тем, что в вашей `$HOME`папке уже могут быть некоторые стандартные файлы конфигурации, которые будут перезаписаны Git. Решение простое: создайте резервные копии файлов, если они вам небезразличны, удалите их, если вам все равно. Я предоставляю вам возможный приблизительный ярлык, чтобы автоматически переместить все файлы-нарушители в папку резервного копирования:
 
-```shell
+```shell=
 mkdir -p .config-backup && \
-config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+zz checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .config-backup/{}
 ```
 
@@ -112,22 +110,22 @@ xargs -I{} mv {} .config-backup/{}
 
 -   Установите флажок `showUntrackedFiles``no`в этом конкретном (локальном) репозитории:
 
-```shell
-config config --local status.showUntrackedFiles no
+```shell=
+zz config --local status.showUntrackedFiles no
 ```
 
 -   Вы закончили, теперь вы можете вводить `config`команды для добавления и обновления файлов точек:
 
-```shell
-config status
-config add .vimrc
+```shell=
+zz status
+zz add .vimrc
 config commit -m "Add vimrc"
 config add .bashrc
 config commit -m "Add bashrc"
 config push
 ```
 
-Опять же, в качестве ярлыка, чтобы не запоминать все эти шаги на любой новой машине, которую вы хотите настроить, вы можете создать простой скрипт, [сохранить его в виде фрагмента Bitbucket](https://bitbucket.org/snippets/nicolapaolucci/7rE9K), как это сделал я, [создать короткий URL](http://bit.do/)\-адрес для него и назвать его так:
+Опять же, в качестве ярлыка, чтобы не запоминать все эти шаги на любой новой машине, которую вы хотите настроить, вы можете создать простой скрипт, [сохранить его в виде фрагмента Bitbucket](https://bitbucket.org/snippets/nicolapaolucci/7/9K), как это сделал я, [создать короткий URL](http://bit.do/)\-адрес для него и назвать его так:
 
 ```shell
 curl -Lks http://bit.do/cfg-install | /bin/bash
